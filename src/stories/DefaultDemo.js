@@ -6,8 +6,7 @@ const style = {
     justifyContent:'center',
     alignItems:'center',
     width: '100vw',
-    top:'600px',
-    height:'180vh',
+    height:'100vh',
 };
 
 export default class DefaultDemo extends React.Component{
@@ -24,7 +23,9 @@ export default class DefaultDemo extends React.Component{
         const {value} = this.state;
         return(
             <div style={style}>
-                <Select items={items} value={value} onChange={this.OnChoseItem}/>
+                <Select items={items}
+                        value={value}
+                        onChange={this.OnChoseItem}/>
             </div>
         )
     }

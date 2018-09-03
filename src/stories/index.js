@@ -5,6 +5,9 @@ import { linkTo } from '@storybook/addon-links';
 
 import Select from "../components/Select";
 import DefaultDemo from "./DefaultDemo";
+import MultipleDemo from "./MultipleDemo";
+import CssCustomizeDemo from  './CssCustomizeDemo'
+import ValueCustomizeDemo from './ValueCustomizeDemo'
 //import { Button, Welcome } from '@storybook/react/demo';
 
 
@@ -18,7 +21,7 @@ import DefaultDemo from "./DefaultDemo";
 //     height:'100vh',
 // };
 
-const items = ['Item1','Item2','Item3','Item4',]
+const items = ['Item 1','Item 2','Item 3','Item 4',]
 
 const Presentation = () => (
         <DefaultDemo items={items}/>
@@ -27,8 +30,11 @@ const Presentation = () => (
 
 
 
-storiesOf('Javascript Ninja', module).add('DefaultDemo', () => (
-    <Presentation />));
+storiesOf('Javascript Ninja', module)
+    .add('DefaultDemo', () => <Presentation />)
+    .add('Multiple Demo',()=> <MultipleDemo items={items}/>)
+    .add('Css Customize Demo',()=> <CssCustomizeDemo items={items}/>)
+    .add('Value Customize Demo',()=> <ValueCustomizeDemo items={items}/>);
 
 
 
