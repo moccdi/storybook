@@ -6,7 +6,8 @@ const style = {
     justifyContent:'center',
     alignItems:'center',
     width: '100vw',
-    height:'100vh',
+    height:'160vh',
+    top:'400px'
 };
 
 export default class MultipleDemo extends React.Component{

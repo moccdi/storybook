@@ -1,34 +1,24 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { linkTo } from '@storybook/addon-links';
 
-import Select from "../components/Select";
 import DefaultDemo from "./DefaultDemo";
 import MultipleDemo from "./MultipleDemo";
 import CssCustomizeDemo from  './CssCustomizeDemo'
 import ValueCustomizeDemo from './ValueCustomizeDemo'
-//import { Button, Welcome } from '@storybook/react/demo';
-
-
-
-//
-// const style = {
-//     display:'flex',
-//     justifyContent:'center',
-//     alignItems:'center',
-//     width: '100vw',
-//     height:'100vh',
-// };
+import DemoDialog from './Dialog@1.0.0/index'
+import DemoDialog2 from './Dialog@2.0.0/index'
 
 const items = ['Item 1','Item 2','Item 3','Item 4',]
+
 
 const Presentation = () => (
         <DefaultDemo items={items}/>
     );
 
 
-
+storiesOf('Basic React', module)
+    .add('DemoDialog', () => <DemoDialog />)
+    .add('DemoDialog2', () => <DemoDialog2 />);
 
 storiesOf('Javascript Ninja', module)
     .add('DefaultDemo', () => <Presentation />)
@@ -38,14 +28,3 @@ storiesOf('Javascript Ninja', module)
 
 
 
-// storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
-
-// storiesOf('Button', module)
-//   .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-//   .add('with some emoji', () => (
-//     <Button onClick={action('clicked')}>
-//       <span role="img" aria-label="so cool">
-//         😀 😎 👍 💯
-//       </span>
-//     </Button>
-//   ));

@@ -79,12 +79,9 @@ export default class Select extends React.Component{
             }),this.setItemsConteinerBox,
         );
     };
-    onClickHandler = (item) => (even) => {
-        this.setState();
-    };
     select = item => {
         const hasSelected = this.state.selected.includes(item);
-        this.setState( state=> ({
+        this.setState( state => ({
             selected: hasSelected ? state.selected.filter(i => i !== item) : [...state.selected, item]
             })
         )
