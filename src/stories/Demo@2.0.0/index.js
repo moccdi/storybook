@@ -1,5 +1,4 @@
 import React from 'react';
-import './style.css';
 import Dialog,{
     DialogHeader,
     DialogActions,
@@ -8,7 +7,7 @@ import Dialog,{
 import './style.css';
 
 
-export default class DemoDialog2 extends React.Component{
+export default class DemoDialog3 extends React.Component{
     state ={
         isDialogOpen:false
     }

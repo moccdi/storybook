@@ -1,0 +1,41 @@
+.dialog{
+  min-width: 300px;
+  min-height: 300px;
+  padding: 10px 0;
+  margin: 0 auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.dialog-inside{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.dialog-header{
+  max-width: 100%;
+  border-bottom: 1px solid grey;
+  padding: 8px 24px;
+}
+.dialog-header.bottom{
+  order: 4;
+  border-bottom: none;
+  border-top: 1px solid grey;
+}
+.dialog-content{
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.dialog-actions.top{
+  order: -1;
+}
+.dialog-actions{
+  height: 40px;
+  display: flex;
+  align-items: center;
+  padding: 0px 24px;
+  justify-content: flex-end;
+}
