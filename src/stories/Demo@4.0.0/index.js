@@ -27,11 +27,9 @@ export default class DemoDialog4 extends React.Component{
                 <Dialog
                     onClose={this.closeDialog} open={isDialogOpen}>
 
-
                         <b header>Some header</b>
 
                         <h1 content>Some Content</h1>
-
 
                         <button actions onClick={this.closeDialog}>
                             Close
