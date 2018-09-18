@@ -51,8 +51,6 @@ export default class Dialog extends React.Component{
     getComponentChildren = () => {
         return React.Children.toArray(this.props.children).reduce(
             (result, element) => {
-                console.log(result)
-                console.log(element)
                 if(Dialog.resolvedComponentNames.includes(element.type.name)){
                     result[element.type.name] = element;
                 }
