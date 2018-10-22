@@ -48,6 +48,7 @@ export default class Select extends React.Component{
         console.log("rootElementBoundery.top" + rootElementBoundery.top + 'px')
         console.log("this.itemsContainerElement.offsetHeight" + this.itemsContainerElement.offsetHeight + 'px')
         console.log(" window.innerHeight" +  window.innerHeight + 'px')
+
         const top = itemsContainerElementBoundery.bottom < window.innerHeight
         ? rootElementBoundery.bottom - this.itemsContainerElement.offsetHeight
         : rootElementBoundery.top;
